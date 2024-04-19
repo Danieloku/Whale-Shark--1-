@@ -36,14 +36,16 @@
     </div>
   </nav>
 
-  <!-- Carrusel de imágenes -->
-  <div id="sharkieCarousel" class="carousel slide" data-ride="carousel">
+ 
+  <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <!-- Pilar izquierdo -->
+    <figure class="pilar">
+      <img src="images/Pilar de tiburones.jpeg" alt="Imagen Pilar Izquierda">
+    </figure>
+
+  <div id="sharkieCarousel" class="carousel slide" style="max-width: 540px; flex-grow: 3;" data-ride="carousel">
     <div class="carousel-inner">
-      <!-- Generamos un item de carrusel para cada imagen de sharkie -->
-      <!-- El primer item debe tener la clase 'active' -->
-      <div class="carousel-inner">
-        <!-- Primer elemento del carrusel con la clase 'active' -->
-        <div class="carousel-item active">
+      <div class="carousel-item active">
           <img src="images/sharkie.jpeg" class="d-block w-100" alt="Sharkie">
         </div>
 
@@ -69,7 +71,7 @@
         </div>
 
         <div class="carousel-item">
-          <img src="images/sharkie.jpeg" class="d-block w-100" alt="Sharkie6">
+          <img src="images/sharkie6.jpeg" class="d-block w-100" alt="Sharkie6">
         </div>
       </div>
 
@@ -82,6 +84,11 @@
         <span class="sr-only">Siguiente</span>
       </a>
     </div>
+
+    <figure class="pilar">
+      <img src="images/Pilar de tiburones.jpeg" alt="Imagen Pilar Derecha">
+    </figure>
+  </div>
 
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

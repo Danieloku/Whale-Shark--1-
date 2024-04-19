@@ -140,3 +140,36 @@ nav a {
     width: 100%;
   }
 }
+
+/* GALERIA HTML
+
+/* Centrar el carrusel y darle un tamaño máximo */
+#sharkieCarousel {
+  margin-top: 20px; /* Agrega algo de margen en la parte superior */
+  max-width: 540px; /* Ancho máximo del carrusel */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ajustar la imagen del carrusel para que no sea más alta que un cierto valor */
+.carousel-item img {
+  max-height: 500px; /* Ajusta esto según tus necesidades */
+  object-fit: cover; /* Esto se asegurará de que las imágenes se recorten en lugar de deformarse */
+}
+
+/* Media query para ajustar el carrusel en pantallas pequeñas */
+@media (max-width: 576px) {
+  #sharkieCarousel {
+    max-width: 100%; /* En pantallas pequeñas, el carrusel puede ocupar el ancho completo */
+  }
+}
+
+.pilar {
+  flex: 1; /* Cada pilar tiene la misma flexibilidad */
+  padding: 50 10px; /* Agrega algo de espacio entre las imágenes y el carrusel */
+}
+
+.pilar img {
+  max-width: 50%; /* Asegúrate de que la imagen no sea más ancha que su contenedor */
+  height: 650px; /* Mantiene la proporción de la imagen */
+}
