@@ -7,6 +7,8 @@
   <title>Tiburón Ballena</title>
   <link rel="icon" type="image/x-icon" href="images/Diseño sin título.png">
 
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -38,32 +40,33 @@
     </div>
   </nav>
 
+  <div class="banner">
+    <img src="images/collage.jpeg" alt="Banner" class="img-fluid w-100">
+  </div>
 
-  <figure>
-    <img src="images/collage.jpeg" alt="collage" width="700" height="400">
-  </figure>
-
-
-
-  <main>
-    <section>
-      <h2 id="fun_facts">¿Sabías que?</h2>
-      <p>Similar a como nosotros tenemos huellas digitales únicas, los tiburon ballena tienen un patrón unico en su
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <img src="images/whaleshark.jpeg" alt="Imagen de un tiburón ballena" class="img-fluid">
+      </div>
+      <div class="col-lg-4">
+        <h2>¿Sabías que?</h2>
+            <p class="lead" style="font-family: 'Open Sans', sans-serif;">Similar a como nosotros tenemos huellas digitales únicas, los tiburon ballena tienen un patrón unico en su
         dorso, que consiste en multitud de lunares y líneas horizontales y verticales de color blanco o amarillento
+      </p>
 
-      <figure>
-        <img src="images/whaleshark.jpeg" alt="lone shark" width="300" height="300">
-        <figcaption>Imagen super asombrosa donde podemos apreciar el patrón de un tiburón ballena.</figcaption>
-      </figure>
-
-      Esta enorme criatura puede crecer hasta 40 pies (12 m) de largo. Pero, a pesar de su tamaño, el tiburón ballena es
+ 
+      <p class="lead" style="font-family: 'Open Sans', sans-serif;">Esta enorme criatura puede crecer hasta 40 pies (12 m) de largo. Pero, a pesar de su tamaño, el tiburón ballena es
       considerado un "amable gigante".
 
       El tiburón ballena se alimenta por filtración y no puede morder ni masticar. Es capaz de procesar más de 1,585
       galones (6,000 lt) de agua por hora a través de sus branquias. Su boca puede medir hasta cuatro pies (1.2 m) de
       ancho pero los dientes del tiburón ballena son tan pequeños que solo pueden procesar camarones pequeños, pescado y
       plancton usando sus dentículos dermales como filtro de succión.
-
+    </p>
+  </div>
+</div>
+</div>
       <!-- Sección para el botón de la API -->
       <section id="apiSection">
         <button id="loadFishImage" class="btn btn-primary">Cargar Imagen Aleatoria</button>
@@ -86,9 +89,6 @@
 
   <!-- Personal JS -->
   <script src="script.js"></script>
+  
 </body>
-
-</html>
-</body>
-
 </html>
