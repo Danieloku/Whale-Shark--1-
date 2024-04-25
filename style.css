@@ -1,22 +1,22 @@
 html, body {
   height: 100%;
-  margin: 0; /* Quita cualquier margen por defecto */
-  font-family: 'Open Sans', sans-serif; /* Fuente más limpia y moderna */
+  margin: 0; 
+  font-family: 'Open Sans', sans-serif; 
 }
 
 body {
-  color: #212121; /* Color de fuente más oscuro para mejorar la legibilidad */
+  color: #212121; 
   background: linear-gradient(45deg, #000f5c, #3f5ffd, #26ab95, #ffffff);
   background-size: 300% 300%;
   animation: color 12s ease-in-out infinite;
 }
 
 .navbar-brand, .nav-link {
-  color: #739eb0; /* Colores personalizados para los enlaces de navegación */
+  color: #739eb0; 
 }
 
 .navbar-light .navbar-toggler {
-  border-color: rgba(115,158,176,0.5); /* Borde del toggler con transparencia */
+  border-color: rgba(115,158,176,0.5);
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -24,30 +24,30 @@ body {
 }
 
 .banner img {
-  max-height: 400px; /* O el alto que desees para tu banner */
-  object-fit: cover; /* Esto asegura que la imagen cubra el área sin estirarse */
-  width: 100%; /* Esto asegura que la imagen ocupe el ancho completo */
+  max-height: 400px; 
+  object-fit: cover; 
+  width: 100%; 
 }
 
 
 #fun_facts, #Conoce_más {
-  text-align: left; /* Alineación a la izquierda para estos títulos */
+  text-align: left;
 }
 
 #fun_facts + p, #Conoce_más + p {
-  font-size: 1rem; /* Tamaño de fuente para los párrafos */
-  line-height: 1.5; /* Altura de línea para mejorar la legibilidad */
-  max-width: 540px; /* Ancho máximo para no tener líneas de texto muy largas */
+  font-size: 1rem;
+  line-height: 1.5; 
+  max-width: 540px; 
 }
 
 .img-fact {
-  max-width: 100%; /* Imagen receptiva */
+  max-width: 100%; 
   border: 3px solid white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 
-/* Animación de fondo */
+
 @keyframes color {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -56,16 +56,27 @@ body {
 
 @media (min-width: 992px) {
   .img-fact {
-    max-width: 50%; /* Imágenes más grandes en pantallas grandes */
+    max-width: 50%; 
   }
 }
+
+.image-container {
+  text-align: center; 
+  margin: 0 auto; 
+}
+
+.img-reduced {
+  max-width: 50%; 
+  height: auto; 
+}
+
 
 /* GALERIA */
 
 
 #sharkieCarousel {
-  margin-top: 20px; /* Agrega algo de margen en la parte superior */
-  max-width: 540px; /* Ancho máximo del carrusel */
+  margin-top: 20px; 
+  max-width: 540px; 
   margin-left: auto;
   margin-right: auto;
 }
@@ -82,11 +93,11 @@ body {
 }
 
 .pilar {
-  flex: 1; /* Cada pilar tiene la misma flexibilidad */
-  padding: 0 10px; /* Agrega algo de espacio entre las imágenes y el carrusel */
+  flex: 1; 
+  padding: 0 10px; 
 }
 
 .pilar img {
-  max-width: 50%; /* Asegúrate de que la imagen no sea más ancha que su contenedor */
-  height: 650px; /* Mantiene la proporción de la imagen */
+  max-width: 50%; 
+  height: 650px;
 }

@@ -1,3 +1,5 @@
+let allFishes = [];
+
 async function fetchData() {
   const url = 'https://fish-species.p.rapidapi.com/fish_api/fishes';
   const options = {
@@ -8,19 +10,31 @@ async function fetchData() {
     }
   };
 
-try {
-    const response = await fetch(url, options);
-    if (!response.ok) {
+  if (allFishes.length === 0) { 
+    try {
+      const response = await fetch(url, options);
+      if (!response.ok) {
         throw new Error('Network response was not ok: ' + response.statusText);
+      }
+      allFishes = await response.json(); // Almacena todos los peces
+      displayRandomFishes(); // Muestra peces aleatorios
+    } catch (error) {
+      console.error('Fetch error:', error);
     }
-    const result = await response.json(); // Cambiado de .text() a .json()
-    console.log(result);
-    displayFishData(result); // Asegúrate de que esta función esté implementada correctamente
-} catch (error) {
-    console.error('Fetch error:', error);
-}
+  } else {
+    displayRandomFishes(); // Ya tienes los peces, muestra aleatorios
+  }
 }
 
+function displayRandomFishes() {
+  const randomFishes = pickRandomFishes(allFishes, 4); // Selecciona 4 peces aleatoriamente
+  displayFishData(randomFishes); // Muestra esos peces
+}
+
+function pickRandomFishes(fishes, count) {
+  const shuffled = fishes.sort(() => 0.5 - Math.random()); // Mezcla el array
+  return shuffled.slice(0, count); // Toma los primeros 'count' elementos
+}
 
 function displayFishData(data) {
   const container = document.getElementById('fishContainer');
@@ -63,5 +77,6 @@ function displayFishData(data) {
 }
 
 
-// Asegúrate de llamar a fetchData cuando sea adecuado, por ejemplo, después de cargar la página
 document.addEventListener('DOMContentLoaded', fetchData);
+document.getElementById('loadRandomFishes').addEventListener('click', fetchData);
+
